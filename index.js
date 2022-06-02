@@ -15,7 +15,7 @@ app.use( (req, res, next) => {
 
 async function start() {
   try {
-    await sequelize.sync()
+    await sequelize.sync()// {force: true} Принудительно синхронизировать модель на сервере
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}...`);
     })
